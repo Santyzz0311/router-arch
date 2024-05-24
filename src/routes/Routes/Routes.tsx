@@ -29,7 +29,7 @@ function Routes() {
               <Route element={<AuthGuard isPrivate />}>
                 <Route path={`${PrivateRoutes.PRIVATE}/*`} element={<Private />} />
               </Route>
-              <Route element={<RoleGuard rol={Roles.ADMIN} />}>
+              <Route element={<RoleGuard role={Roles.ADMIN} />}>
                 <Route path={PrivateRoutes.DASHBOARD} element={<Dashboard />} />
               </Route>
             </RoutesWithNotFound>

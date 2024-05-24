@@ -12,7 +12,7 @@ function Login() {
   const login = async () => {
     try {
       const result = await getCharacterById({ characterId: 2 })
-      dispatch(createUser({ ...result, role: Roles.USER }))
+      dispatch(createUser({ ...result, role: Roles.ADMIN }))
       navigate(`/${PrivateRoutes.PRIVATE}`, { replace: true })
     } catch (error) {
       console.error(error)
